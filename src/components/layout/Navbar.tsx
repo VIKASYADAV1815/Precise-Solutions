@@ -16,76 +16,96 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/50 bg-white/80 backdrop-blur-xl shadow-sm transition-all duration-300">
-      {/* Reduced height from h-20 to h-16 (or h-14) to tighten top/bottom padding */}
-      <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group z-50">
-          {/* Increased height (h-12 to h-14) and width to make the logo physically larger */}
-          <div className="relative w-44 h-12 md:w-60 md:h-16">
+    <header className="sticky top-0 z-100 w-full border-b border-slate-100 bg-white/80 backdrop-blur-xl transition-all duration-300">
+      <div className="container mx-auto px-4 md:px-8 h-20 md:h-24 flex items-center justify-between">
+        
+        {/* Logo Section */}
+        <Link href="/" className="flex items-center gap-3 z-110">
+          <div className="relative w-40 h-12 md:w-56 md:h-16">
             <Image 
               src="/logo.jpeg" 
               alt="Precise Solutions Logo" 
               fill
-              className="object-contain object-left group-hover:opacity-80 transition-opacity duration-300"
+              className="object-contain object-left"
               priority
             />
           </div>
         </Link>
         
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-10 text-[15px] font-medium tracking-wide">
+        {/* Desktop Nav - Editorial Style */}
+        <nav className="hidden md:flex gap-10">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="relative text-slate-600 hover:text-slate-900 transition-colors group">
+            <Link 
+              key={link.name} 
+              href={link.href} 
+              className="relative text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-slate-900 transition-colors group"
+            >
               {link.name}
-              <span className="absolute inset-x-0 -bottom-1.5 h-0.5 bg-slate-900 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-slate-900 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
         </nav>
         
+        {/* CTA Button */}
         <Link 
           href="/contact" 
-          className="hidden md:inline-flex h-10 items-center justify-center rounded-full bg-slate-900 px-7 text-[14px] font-semibold text-white shadow-lg shadow-slate-900/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-slate-900/30"
+          className="hidden md:inline-flex h-11 items-center justify-center rounded-full bg-slate-900 px-8 text-[10px] font-bold text-white uppercase tracking-[0.2em] transition-all duration-300 hover:bg-black hover:shadow-2xl hover:shadow-slate-200 active:scale-95"
         >
           Get a Quote
         </Link>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden relative z-50 p-2 -mr-2 text-slate-600 hover:text-slate-900 transition-colors"
+          className="md:hidden z-110 p-2 text-slate-900"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle Menu"
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Nav Overlay */}
+      {/* Mobile Nav Overlay - Clean Slide Down */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div 
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl md:hidden z-40"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: "circOut" }}
+            className="absolute top-0 left-0 w-full h-screen bg-white md:hidden z-105 flex flex-col pt-32 px-8"
           >
-            <div className="flex flex-col px-6 py-6 space-y-4">
-              {navLinks.map((link) => (
-                <Link 
-                  key={link.name} 
-                  href={link.href} 
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-bold text-slate-700 hover:text-blue-600 transition-colors py-2 border-b border-slate-50 last:border-0"
+            <div className="flex flex-col space-y-8">
+              {navLinks.map((link, idx) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.1 }}
                 >
-                  {link.name}
-                </Link>
+                  <Link 
+                    href={link.href} 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-3xl font-serif text-slate-900 uppercase tracking-tighter hover:text-slate-500 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
-              <Link 
-                href="/contact" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-4 flex h-12 items-center justify-center rounded-xl bg-blue-600 px-6 text-base font-bold text-white shadow-lg shadow-blue-600/30 transition-all active:scale-95"
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="pt-8 border-t border-slate-100"
               >
-                Get a Quote
-              </Link>
+                <Link 
+                  href="/contact" 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex h-14 items-center justify-center rounded-full bg-slate-900 text-white text-[12px] font-bold uppercase tracking-[0.2em]"
+                >
+                  Get a Quote
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}

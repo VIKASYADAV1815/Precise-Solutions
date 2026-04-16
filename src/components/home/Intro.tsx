@@ -13,7 +13,7 @@ export default function Intro() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-1/2 relative h-[450px] md:h-[550px] rounded-[2rem] overflow-hidden bg-slate-50"
+          className="w-full md:w-1/2 relative h-112.5 md:h-137.5 rounded-4xl overflow-hidden bg-slate-50"
         >
           <Image 
             src="/furniture/home furniture/Picture109.png" 
@@ -40,7 +40,7 @@ export default function Intro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif text-slate-900 leading-[1.5] tracking-tight"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif text-slate-900 leading-normal tracking-tight"
           >
             <span className="uppercase">
               That is why after 10 plus years of experience in the export market, we decided to become your

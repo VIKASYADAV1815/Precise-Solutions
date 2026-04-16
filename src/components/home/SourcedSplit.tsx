@@ -39,7 +39,7 @@ export default function SourcedSplit() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-7/12 relative aspect-[4/3] sm:aspect-video md:aspect-[4/3] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden bg-slate-50"
+          className="w-full md:w-7/12 relative aspect-4/3 sm:aspect-video md:aspect-4/3 rounded-3xl md:rounded-[2.5rem] overflow-hidden bg-slate-50"
         >
           <Image 
             src="/furniture/home%20furniture/Picture112.png"

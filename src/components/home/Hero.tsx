@@ -23,7 +23,7 @@ export default function Hero() {
 
   return (
     <section className="relative w-full px-3 py-3 sm:px-6 lg:px-8 bg-white">
-      <div className="relative w-full h-[75vh] min-h-[500px] md:h-[85vh] md:min-h-[650px] rounded-[1.5rem] md:rounded-[3rem] overflow-hidden bg-slate-50">
+      <div className="relative w-full h-[75vh] min-h-125 md:h-[85vh] md:min-h-162.5 rounded-3xl md:rounded-[3rem] overflow-hidden bg-slate-50">
         
         {/* Background Slideshow */}
         <div className="absolute inset-0">
@@ -39,7 +39,7 @@ export default function Hero() {
         
         {/* Light Overlay for Dark Text Visibility */}
         <div className="absolute inset-0 bg-white/20"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-white/60 via-white/30 to-transparent"></div>
 
         {/* Content Container */}
         <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-16 lg:p-24">
