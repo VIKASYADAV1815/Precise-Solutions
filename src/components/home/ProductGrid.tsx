@@ -27,7 +27,7 @@ export default function ProductGrid() {
     },
     {
       id: "shower-hinge",
-      name: "Luxury Shower Hinge",
+      name: "Shower Hinge",
       category: "Hardware",
       image: "/lock/shower hing/Picture6.png",
       rating: 4.8,
@@ -43,7 +43,7 @@ export default function ProductGrid() {
     },
     {
       id: "home-series",
-      name: "Luxury Home Furniture",
+      name: "Home Furniture",
       category: "Furniture",
       image: "/furniture/home furniture/Picture108.png",
       rating: 4.9,

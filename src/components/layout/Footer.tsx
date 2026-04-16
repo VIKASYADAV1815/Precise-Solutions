@@ -28,8 +28,8 @@ export default function Footer() {
               <span>Room 4709, 47th Floor, No. 372 Huanshi East Road<br/>Yuexiu District, Guangzhou, China</span>
             </p>
             <p className="flex items-center gap-2 mt-4">
-              <span className="text-slate-400">👤</span>
-              <span>Contact: <strong>Piyush Sharma</strong></span>
+        
+        
             </p>
             <p className="flex items-center gap-2">
               <span className="text-slate-400">📞</span>

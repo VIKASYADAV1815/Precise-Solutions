@@ -9,23 +9,23 @@ import { LayoutGrid, Lock, Box, Columns, Hammer, DoorOpen, Settings, CheckCircle
 const hardwareProducts = [
   {
     id: `glass-door-lock`,
-    name: `Premium Glass Door Lock Collection`,
+    name: `Glass Door Lock Collection`,
     category: "Glass Door Lock",
-    desc: "Premium security solutions with sleek modern aesthetics for frameless glass doors.",
+    desc: "Security solutions with sleek modern aesthetics for frameless glass doors.",
     image: `/lock/glassdoor lock/Picture1.png`,
     link: `/products/glass-door-lock`
   },
   {
     id: `shower-hinge`,
-    name: `Luxury Shower Hinge Series`,
+    name: `Shower Hinge Series`,
     category: "Shower Hinge",
-    desc: "Corrosion-resistant luxury hinges ensuring smooth operation for modern shower enclosures.",
+    desc: "Corrosion-resistant hinges ensuring smooth operation for modern shower enclosures.",
     image: `/lock/shower hing/Picture6.png`,
     link: `/products/shower-hinge`
   },
   {
     id: `floor-spring`,
-    name: `Heavy Duty Floor Spring Systems`,
+    name: `Floor Spring Systems`,
     category: "Floor Spring",
     desc: "Heavy-duty systems for smooth, controlled, and reliable door movement in high-traffic areas.",
     image: `/lock/floor spring/Picture16.png`,
@@ -33,7 +33,7 @@ const hardwareProducts = [
   },
   {
     id: `patch-fitting`,
-    name: `Architectural Patch Fittings`,
+    name: `Patch Fittings`,
     category: "Patch Fitting",
     desc: "Architectural fixtures providing robust structural support while maximizing glass transparency.",
     image: `/lock/patch fitting/Picture28.png`,
@@ -41,15 +41,15 @@ const hardwareProducts = [
   },
   {
     id: `door-handle`,
-    name: `Elegant Door Handle Collection`,
+    name: `Door Handle Collection`,
     category: "Door Handle",
-    desc: "Elegant, ergonomic handles that provide the perfect finishing touch for any premium door.",
+    desc: "Ergonomic handles that provide the perfect finishing touch for any door.",
     image: `/lock/door handle/Picture34.png`,
     link: `/products/door-handle`
   },
   {
     id: `sliding-fitting`,
-    name: `Smooth Sliding Fitting Systems`,
+    name: `Sliding Fitting Systems`,
     category: "Sliding Fitting",
     desc: "Advanced sliding systems engineered for effortless and silent operation of heavy panels.",
     image: `/lock/sliding fitting/Picture57.png`,
@@ -57,7 +57,7 @@ const hardwareProducts = [
   },
   {
     id: `aluminium-door-fitting`,
-    name: `Modern Aluminium Door Fittings`,
+    name: `Aluminium Door Fittings`,
     category: "Aluminium Door Fitting",
     desc: "Specialized, durable fittings designed to integrate perfectly with standard aluminium profiles.",
     image: `/lock/aluminium door fitting/Picture66.png`,
@@ -79,7 +79,7 @@ const hardwareCategories = [
 const furnitureProducts = [
   {
     id: `eoc-series`,
-    name: `Premium Ergonomic Office Chair Series`,
+    name: `Ergonomic Office Chair Series`,
     category: "Ergonomic Office Chair",
     desc: "Bionic design techniques for ultimate back support, adjustability, and all-day comfort.",
     image: `/furniture/Ergonomic office chair/Picture70.png`,
@@ -87,15 +87,15 @@ const furnitureProducts = [
   },
   {
     id: `home-series`,
-    name: `Luxury Home Furniture Collection`,
+    name: `Home Furniture Collection`,
     category: "Home Furniture",
-    desc: "Luxurious comfort combined with contemporary aesthetics to elevate your living space.",
+    desc: "Comfort combined with contemporary aesthetics to elevate your living space.",
     image: `/furniture/home furniture/Picture108.png`,
     link: `/products/home-furniture`
   },
   {
     id: `outdoor-series`,
-    name: `Premium Outdoor & Patio Collection`,
+    name: `Outdoor & Patio Collection`,
     category: "Outdoor Furniture",
     desc: "Weather-resistant, stylish pieces that bring living room comfort to your outdoor spaces.",
     image: `/furniture/outdoor furniture/Picture115.png`,
