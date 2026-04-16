@@ -52,7 +52,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Phone</h3>
                     <p className="text-slate-600">
-                      <strong>Piyush Sharma</strong><br/>
+            
                       +86-136 1008 7785
                     </p>
                   </div>
