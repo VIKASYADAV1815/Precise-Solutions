@@ -16,13 +16,13 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 left-0 w-full z-[100] bg-slate-50 border-b border-slate-100">
+    <header className="sticky top-0 left-0 w-full z-[100] pointer-events-none">
       <div className="container mx-auto px-6 md:px-12">
         <div className="relative flex items-center justify-between h-16 md:h-20">
           
-          {/* 1. Logo - Made Larger */}
-          <Link href="/" className="relative z-[110] flex items-center shrink-0">
-            <div className="relative w-40 h-10 md:w-56 md:h-14">
+          {/* 1. Logo - Made Slightly Larger */}
+          <Link href="/" className="relative z-[110] flex items-center shrink-0 pointer-events-auto">
+            <div className="relative w-44 h-12 md:w-64 md:h-16">
               <Image 
                 src="/logo.jpeg" 
                 alt="Logo" 
@@ -33,8 +33,8 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* 2. Floating Menu - The white "Cut-out" capsule style (pehle wala UI) */}
-          <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-0 bg-white px-12 h-16 items-center rounded-b-[1.8rem] shadow-sm border-x border-b border-slate-100/50 z-[110]">
+          {/* 2. Floating Menu - Glassmorphic capsule style */}
+          <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-0 bg-white/70 backdrop-blur-md px-12 h-16 items-center rounded-b-[1.8rem] shadow-sm border-x border-b border-white/50 z-[110] pointer-events-auto">
             <div className="flex gap-10">
               {navLinks.map((link) => (
                 <Link 
@@ -49,7 +49,7 @@ export default function Navbar() {
           </nav>
 
           {/* 3. Contact Us Button - Instead of Icons */}
-          <div className="hidden md:flex items-center z-[110]">
+          <div className="hidden md:flex items-center z-[110] pointer-events-auto">
             <Link 
               href="/contact" 
               className="inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-black transition-all shadow-md active:scale-95"
@@ -60,7 +60,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Trigger */}
           <button 
-            className="lg:hidden z-[110] p-2 text-slate-900"
+            className="lg:hidden z-[110] p-2 text-slate-900 bg-white/80 rounded-full backdrop-blur-sm pointer-events-auto"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
