@@ -8,13 +8,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
         <div className="md:col-span-2">
           <Link href="/" className="inline-block mb-6">
-            <div className="relative w-56 h-14">
+            <div className="relative w-64 h-16">
               <Image 
-                src="/logo.jpeg" 
+                src="/logo2.png" 
                 alt="Precise Solutions Logo" 
                 fill
                 className="object-contain object-left"
-                sizes="224px"
+                sizes="256px"
               />
             </div>
           </Link>

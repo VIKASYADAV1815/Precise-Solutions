@@ -15,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased scroll-smooth">
-      <body className="bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white">
+      <body
+        suppressHydrationWarning
+        className="bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white"
+      >
         <Navbar />
         <main className="w-full">{children}</main>
         <Footer />

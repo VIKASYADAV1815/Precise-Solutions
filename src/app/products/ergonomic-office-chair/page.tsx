@@ -97,6 +97,7 @@ export default function ErgonomicOfficeChair() {
                 src={`/furniture/Ergonomic office chair/Picture${sliderImages[currentSlide]}.png`}
                 alt={`Premium Ergonomic Office Chair - View ${currentSlide + 1}`}
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain drop-shadow-xl"
                 priority
               />
@@ -173,6 +174,7 @@ export default function ErgonomicOfficeChair() {
                         src={`/furniture/Ergonomic office chair/Picture${num}.png`}
                         alt={`Feature Diagram ${num}`}
                         fill
+                        sizes="(max-width: 640px) 100vw, 50vw"
                         className="object-contain"
                       />
                     </div>
@@ -211,6 +213,7 @@ export default function ErgonomicOfficeChair() {
                     src={`/furniture/Ergonomic office chair/Picture${num}.png`}
                     alt={`Blueprint ${num}`}
                     fill
+                    sizes="(max-width: 640px) 50vw, 33vw"
                     className="object-contain p-2"
                   />
                 </div>
@@ -292,6 +295,7 @@ export default function ErgonomicOfficeChair() {
                   src={`/furniture/Ergonomic office chair/Picture${num}.png`}
                   alt={`Office Setup ${num}`}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>

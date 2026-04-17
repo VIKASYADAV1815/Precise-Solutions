@@ -13,13 +13,14 @@ export default function FeatureSplit() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-1/2 relative h-[400px] sm:h-[500px] lg:h-[600px] rounded-[2rem] overflow-hidden"
+          className="w-full md:w-1/2 relative h-100 sm:h-125 lg:h-150 rounded-4xl overflow-hidden"
         >
           <Image 
             src="/furniture/Ergonomic office chair/Picture70.png"
             alt="Create & Customize Your Furniture"
             fill
             className="object-cover bg-slate-100"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </motion.div>
         

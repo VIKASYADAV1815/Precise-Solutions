@@ -27,7 +27,7 @@ export default function BannerImage() {
             className="lg:col-span-7 relative rounded-2xl md:rounded-4xl overflow-hidden bg-slate-50 p-2.5 border border-slate-100 shadow-sm"
           >
             {/* aspect-video with a slightly taller ratio (16/10) for a bigger look */}
-            <div className="relative w-full aspect-16/10 rounded-xl md:rounded-3xl overflow-hidden">
+            <div className="relative w-full aspect-16/11 rounded-xl md:rounded-3xl overflow-hidden">
               <Image
                 src="/banner.jpeg"
                 alt="Source Smarter from China"

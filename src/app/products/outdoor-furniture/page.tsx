@@ -35,7 +35,7 @@ export default function OutdoorFurniture() {
         <div className="bg-white rounded-2xl p-6 lg:p-10 shadow-sm border border-slate-200 mb-10 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
           
           {/* Image Slider */}
-          <div className="w-full lg:w-1/2 relative h-[450px] lg:h-[550px] bg-slate-50 rounded-xl flex items-center justify-center border border-slate-100 overflow-hidden">
+          <div className="w-full lg:w-1/2 relative h-112.5 lg:h-137.5 bg-slate-50 rounded-xl flex items-center justify-center border border-slate-100 overflow-hidden">
             <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm text-xs font-bold text-slate-600 flex items-center gap-1.5 z-10">
               <Sun className="w-3.5 h-3.5" /> Outdoor Series
             </div>
@@ -63,6 +63,7 @@ export default function OutdoorFurniture() {
                 src={`/furniture/outdoor furniture/Picture${sliderImages[currentSlide]}.png`}
                 alt={`Premium Outdoor Furniture - View ${currentSlide + 1}`}
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain drop-shadow-xl"
                 priority
               />
@@ -119,7 +120,7 @@ export default function OutdoorFurniture() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
                 {features.map((feature, idx) => (
                   <div key={idx} className="flex gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs mt-0.5">
+                    <div className="shrink-0 w-6 h-6 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs mt-0.5">
                       {idx + 1}
                     </div>
                     <div>

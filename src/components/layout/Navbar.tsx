@@ -22,11 +22,12 @@ export default function Navbar() {
           
           {/* 1. Logo - Made Slightly Larger */}
           <Link href="/" className="relative z-110 flex items-center shrink-0 pointer-events-auto">
-            <div className="relative w-44 h-12 md:w-64 md:h-16">
+            <div className="relative w-48 h-14 md:w-72 md:h-18">
               <Image 
-                src="/logo.jpeg" 
+                src="/logo2.png" 
                 alt="Logo" 
                 fill
+                sizes="(max-width: 768px) 192px, 288px"
                 className="object-contain object-left"
                 priority
               />
